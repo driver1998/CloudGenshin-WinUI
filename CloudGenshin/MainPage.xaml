@@ -1,0 +1,38 @@
+﻿<Page
+    x:Class="CloudGenshin.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CloudGenshin"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    mc:Ignorable="d"
+    muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="180"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel x:Name="TitleBarRegion" Margin="16, 0, 0, 0" Background="Transparent" Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+            <FontIcon Glyph="&#xE753;" Margin="0, 4, 0, 0"></FontIcon>
+            <TextBlock VerticalAlignment="Center" Margin="8, 0, 0, 0">云原神</TextBlock>
+        </StackPanel>
+        <CommandBar x:Name="CommandPanel" Grid.Row="0" Grid.Column="1" DefaultLabelPosition="Right" ClosedDisplayMode="Compact">
+            <AppBarToggleButton x:Name="TouchModeToggle" Label="触摸模式" Checked="TouchModeToggle_Checked" Unchecked="TouchModeToggle_Unchecked">
+                <AppBarToggleButton.Icon>
+                    <FontIcon Glyph="&#xE815;"/>
+                </AppBarToggleButton.Icon>
+            </AppBarToggleButton>
+            <AppBarButton x:Name="FullScreen" Icon="FullScreen" Label="全屏" Click="FullScreen_Click"></AppBarButton>
+        </CommandBar>
+
+        <muxc:WebView2 x:Name="WebView" Grid.Row="1" Grid.ColumnSpan="3" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Source="https://ys.mihoyo.com/cloud/"></muxc:WebView2>
+    </Grid>
+</Page>

@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "CloudGenshin": {
+      "commandName": "MsixPackage"
+    }
+  }
+}
