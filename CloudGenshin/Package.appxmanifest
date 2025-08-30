@@ -11,7 +11,7 @@
   <Identity
     Name="11ca83fe-9544-48df-85c0-e26f8a8ad65f"
     Publisher="CN=driver1998"
-    Version="1.0.2.0" />
+    Version="1.0.3.0" />
 
   <mp:PhoneIdentity PhoneProductId="11ca83fe-9544-48df-85c0-e26f8a8ad65f" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
